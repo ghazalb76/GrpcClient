@@ -8,8 +8,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.io.Serializable;
+
 @RestController
-public class testController {
+public class testController  {
 
     @PostMapping("/request")
     public ResponseEntity<String> callService() {
@@ -18,7 +20,7 @@ public class testController {
                 .setProcessReference("request.getProcessReference()")
                 .setCallerReference("request.getCallerReference()")
                 .setServiceID("request.getServiceId()")
-                .setCallerInputJson("request.getCallerInputJson()")
+                .setCallerInputJson("{\"name\": \"test\"}")
                 .setPreviewsOutput("request.getPreviewsOutput()")
                 .setTokenAA("request.getTokenAA()")
                 .build();
