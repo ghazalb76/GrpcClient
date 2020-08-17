@@ -7,17 +7,22 @@ import ir.tourismit.tit.core.grpc.GrpcClient;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
+import java.util.Random;
+
 @Service
 public class RequestService {
 
     @Async
     public void sendRequest(int process){
         int request = 1;
+        Random rand = new Random();
 
         while(true){
             request++;
             Request request1 = Request.newBuilder()
-                    .setProcessID(String.valueOf(process))
+//                    .setProcessID(String.valueOf(process))
+                    .setProcessID(String.valueOf(rand.nextInt(2)))
+
                     .setProcessReference(String.valueOf(request))
                     .setCallerReference("request.getCallerReference()")
                     .setServiceID("request.getServiceId()")

@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.config;
 
 import ir.tourismit.tit.core.configuration.GrpcChannel;
 import org.springframework.stereotype.Component;

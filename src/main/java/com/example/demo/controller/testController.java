@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.controller;
 
 import ir.tourismit.tit.core.Request;
 import ir.tourismit.tit.core.Response;
